@@ -17,3 +17,8 @@ body {
   margin: 0;
   background: #fff;
 }
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}

@@ -1,14 +1,16 @@
-import { Typography } from '@mui/material'
+import { BrowserRouter } from "react-router";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import AppRoutes from "./routes";
 
 function App() {
-
   return (
-    <>
-      <Typography variant='h1' component='h1'>
-        Welcome to Track My Expense!
-      </Typography>
-    </>
-  )
+    <BrowserRouter>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <AppRoutes />
+      </LocalizationProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
